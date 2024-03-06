@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body>
+    <main class="game">
+      <div class="game__panel">
+        <button class="game__button" name="play">play/pause</button>
+        <button class="game__button" name="generate">generate</button>
+        <button class="game__button" name="clear">clear</button>
+        <label for="speed">Speed:</label>
+        <select name="speed">
+          <option value="1">1x</option>
+          <option value="2">2x</option>
+          <option value="5">5x</option>
+          <option value="10">10x</option>
+          <option value="20">20x</option>
+          <option value="50" selected>50x</option>
+        </select>
+        <label for="size">Field size:</label>
+        <input
+          type="number"
+          name="size"
+          min="2"
+          max="10000"
+          value="100"
+        />
+      </div>
+      <div class="game__info">
+        <div class="game__counter">
+          Generation: <span class="game__counter-value">0</span>
+        </div>
+        <div class="game__time">
+          Last generation time: <span class="game__time-value">0</span> ms
+        </div>
+      </div>
+      <div class="game__field">
+        <canvas class="game__canvas" width="1000" height="1000"></canvas>
+      </div>
+    </main>
+
+    <script type="module" src="scripts/app.js"></script>
+  </body>
+</html>
